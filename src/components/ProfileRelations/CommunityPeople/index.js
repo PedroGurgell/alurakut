@@ -13,7 +13,7 @@ function CommunityPeople({people}){
         {newPeople.map((itemAtual) => {
         return(
             <li key={itemAtual}>
-                <a href={`/users/${itemAtual}`}>
+                <a href={`https://github.com/${itemAtual}`}>
                  <img src={`https://github.com/${itemAtual}.png`} />
                  <span>{itemAtual}</span>
                 </a>

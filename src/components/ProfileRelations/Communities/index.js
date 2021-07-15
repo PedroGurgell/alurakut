@@ -14,7 +14,7 @@ function Communities({ community }){
             {newCommunity.map((itemAtual) => {
               return(
                 <li key={itemAtual.id}>
-                  <a href={`/users/${itemAtual.title}`}>
+                  <a href={itemAtual.image}>
                     <img src={itemAtual.image} />
                     <span>{itemAtual.title}</span>
                   </a>

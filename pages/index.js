@@ -6,6 +6,7 @@ import {AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet} 
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 import Communities from '../src/components/ProfileRelations/Communities';
 import CommunityPeople from '../src/components/ProfileRelations/CommunityPeople';
+import Followers from '../src/components/ProfileRelations/followers';
 /*
 const Title = styled.h1`
   font-size: 50px;
@@ -45,6 +46,19 @@ export default function Home() {
     'PedroGurgell'
   ]
 
+  ///Requisição do servidor da api do github
+  const [seguidores,setSeguidores] = React.useState([]);
+
+  React.useEffect(function(){
+    fetch('https://api.github.com/users/PedroGurgell/followers')
+    .then(function (serverResponse){
+       return serverResponse.json();
+    })
+    .then(function(response){
+      setSeguidores(response);
+    })
+  }, [])
+  
   return (
     <>
     <AlurakutMenu githubUser={usuario}/>
@@ -96,6 +110,12 @@ export default function Home() {
         </Box>
       </div>
       <div className="profileRelations" style={{gridArea:'profileRelations'}}>
+      <ProfileRelationsBoxWrapper>
+
+        <Followers followers = {seguidores} />
+        
+      </ProfileRelationsBoxWrapper>
+
       <ProfileRelationsBoxWrapper>
 
         <Communities community = {comunidades}/>
