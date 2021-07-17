@@ -1,6 +1,5 @@
 function Communities({ community }){
   
-    
     return(
     <>
         <h2 className="smallTitle">
@@ -11,8 +10,8 @@ function Communities({ community }){
               {community.map((itemAtual) => {
                 return(
                   <li key={itemAtual.id}>
-                    <a href={itemAtual.image}>
-                      <img src={itemAtual.image} />
+                    <a href={itemAtual.imageUrl}>
+                      <img src={itemAtual.imageUrl} />
                       <span>{itemAtual.title}</span>
                     </a>
                   </li>
