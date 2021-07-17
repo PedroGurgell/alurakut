@@ -7,12 +7,8 @@ import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 import Communities from '../src/components/ProfileRelations/Communities';
 import CommunityPeople from '../src/components/ProfileRelations/CommunityPeople';
 import Followers from '../src/components/ProfileRelations/followers';
-/*
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
-*/
+
+
 function ProfileSideBar(propriedades){
   return(
     <Box as="aside">
@@ -28,14 +24,20 @@ function ProfileSideBar(propriedades){
     </Box>
   );
 }
+
 export default function Home() {
+
+  ///Usuario que será usado na pagina
+  const usuario = "omariosouto";
+
+  ///Comunidades
   const [comunidades, setComunidades] = React.useState([{
     id:'15151156',
     title : 'fotos fantásticas',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png'
   }]);
-  ///const comunidades= ['fotos'];
-  const usuario = "PedroGurgell";
+
+  ///Pessoas utilizadas nas pessoas da comunidade;
   const pessoasFavoritas = [
     'juunegreiros', 
     'omariosouto', 
@@ -46,19 +48,6 @@ export default function Home() {
     'PedroGurgell'
   ]
 
-  ///Requisição do servidor da api do github
-  const [seguidores,setSeguidores] = React.useState([]);
-
-  React.useEffect(function(){
-    fetch('https://api.github.com/users/PedroGurgell/followers')
-    .then(function (serverResponse){
-       return serverResponse.json();
-    })
-    .then(function(response){
-      setSeguidores(response);
-    })
-  }, [])
-  
   return (
     <>
     <AlurakutMenu githubUser={usuario}/>
@@ -112,7 +101,7 @@ export default function Home() {
       <div className="profileRelations" style={{gridArea:'profileRelations'}}>
       <ProfileRelationsBoxWrapper>
 
-        <Followers followers = {seguidores} />
+        <Followers usuario = {usuario} />
         
       </ProfileRelationsBoxWrapper>
 

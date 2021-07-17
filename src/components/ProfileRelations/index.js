@@ -16,9 +16,15 @@ export const ProfileRelationsBoxWrapper = styled(Box)`
     height: 100%;
     position: relative;
   }
+  .relations-content{
+    overflow: scroll;
+  }
+  .relations-content::-webkit-scrollbar { 
+    display: none; 
+  }
   ul li a {
     display: inline-block;
-    height: 102px;
+    height: 90px;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -48,5 +54,10 @@ export const ProfileRelationsBoxWrapper = styled(Box)`
       z-indeX: 1;
       background-image: linear-gradient(0deg,#00000073,transparent);
     }
+  }
+  .cross-bar{
+    width:100%;
+    height:5px;
+    background-color:transparent;
   }
 `;
