@@ -86,7 +86,7 @@ export default function Home(props) {
         </Box>
 
         <Box>
-          <h2 className="subTitle">O que você deseja fazer?</h2>
+          <h2 className="subTitle">Crie aqui a sua Comunidade!</h2>
   
           <form onSubmit={function handleCreateCommunity(event){
             event.preventDefault();
@@ -157,15 +157,19 @@ export default function Home(props) {
 }
 ///Erro ao verificar usuarios invalidos na URL : sempre é true
 export async function getServerSideProps(context) {
-  const cookies = nookies.get(context)
+
+  const cookies = nookies.get(context);
   const token = cookies.USER_TOKEN;
-  const { isAuthenticated } = await fetch('https://alurakut.vercel.app/api/auth', {
+  const { githubUser } = jwt.decode(token);
+  const { isAuthenticated } = await fetch('http://localhost:3000/api/auth', {
     headers: {
         Authorization: token
       }
   })
   .then((resposta) => resposta.json())
   
+  console.log('isAuthenticated',isAuthenticated);
+  console.log('token',token);
   if(!isAuthenticated) {
     return {
       redirect: {
@@ -174,11 +178,9 @@ export async function getServerSideProps(context) {
       }
     }
   }
-
-  const { githubUser } = jwt.decode(token);
   return {
     props: {
-      githubUser
-    },
+      githubUser,
+    }
   }
 }

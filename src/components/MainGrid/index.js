@@ -14,10 +14,10 @@ const MainGrid = styled.main`
 
   @media(min-width:860px){
     display:grid;
-    max-width:1110px;
+    max-width:1200px;
     grid-template-areas:
     "profileArea welcomeArea profileRelations";
-    grid-template-columns:160px 1fr 312px;
+    grid-template-columns:200px 3fr 300px;
   }
  `;
 

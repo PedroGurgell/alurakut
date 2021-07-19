@@ -35,7 +35,7 @@ export function AlurakutMenu({ githubUser }) {
         </nav>
 
         <nav>
-          <a href={`/logout`}>
+          <a href={`/login`}>
             Sair
           </a>
           <div>
@@ -54,7 +54,7 @@ export function AlurakutMenu({ githubUser }) {
 }
 AlurakutMenu.Wrapper = styled.header`
   width: 100%;
-  background-color: #308BC5;
+  background: linear-gradient(90.23deg, rgba(64, 35, 111, 1) 2%, #232B6F 98%);
   .alurakutMenuProfileSidebar {
     background: white;
     position: fixed;
@@ -93,7 +93,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
   }
   .container {
-    background-color: #308BC5;
+    background: linear-gradient(90.23deg, rgba(64, 35, 111, 1) 2%, #232B6F 98%);
     padding: 7px 16px;
     max-width: 1110px;
     margin: auto;
@@ -126,7 +126,7 @@ AlurakutMenu.Wrapper = styled.header`
         text-decoration: none;
         &:after {
           content: " ";
-          background-color: #5292C1;
+          background-color: rgba(35, 35, 111, 1);
           display: block;
           position: absolute;
           width: 1px;
@@ -140,7 +140,7 @@ AlurakutMenu.Wrapper = styled.header`
     }
     input {
       color: #ffffff;
-      background: #5579A1;
+      background: rgba(20, 25, 80, 1);
       padding: 10px 42px;
       border: 0;
       background-image: url(${`${BASE_URL}/icons/search.svg`});
@@ -211,7 +211,7 @@ export function AlurakutProfileSidebarMenuDefault() {
           <img src={`${BASE_URL}/icons/plus.svg`} />
             GitHub Trends
           </a>
-        <a href="/logout">
+        <a href="/login">
           <img src={`${BASE_URL}//icons/logout.svg`} />
             Sair
           </a>
@@ -222,7 +222,7 @@ export function AlurakutProfileSidebarMenuDefault() {
 AlurakutProfileSidebarMenuDefault.Wrapper = styled.div`
   a {
     font-size: 12px;
-    color: #2E7BB4;
+    color: rgba(75, 75, 170, .8);
     margin-bottom: 16px;
     display: flex;
     align-items: center;
@@ -321,13 +321,12 @@ OrkutNostalgicIconSet.List = styled.ul`
 const AlurakutLoginScreen = css`
   :root {
     --backgroundPrimary: #D9E6F6;
-    --backgroundSecondary: #F1F9FE;
+    --backgroundSecondary:#FFFFFF;
     --backgroundTertiary: #FFFFFF;
-    --backgroundQuarternary: #BBCDE8;
-    --colorPrimary: #2E7BB4;
-    --colorSecondary: #388BB0;
+    --backgroundQuarternary: rgba(80, 65, 160, .1);
+    --colorSecondary:rgba(80, 65, 160, 0.5);
     --colorTertiary: #2F4A71;
-    --colorQuarternary: #D81D99;
+    --colorQuarternary: rgba(80, 65, 160, 1);
     --textPrimaryColor: #333333;
     --textSecondaryColor: #FFFFFF;
     --textTertiaryColor: #5A5A5A;
@@ -335,8 +334,10 @@ const AlurakutLoginScreen = css`
     --commonRadius: 8px;
   }
   .loginScreen {
+    background: linear-gradient(90.23deg, rgba(64, 35, 111, 1) 2%, #232B6F 98%);
+    border-radius:15px;
     padding: 16px;
-    max-width: 1110px;
+    max-width: 1200px;
     display: grid;
     --gap: 12px;
     --gutter: 16px;
@@ -413,7 +414,7 @@ const AlurakutLoginScreen = css`
         }
         a {
           text-decoration: none;
-          color: var(--colorPrimary);
+          color: rgba(80, 65, 160, 1);
         }
         input {
           width: 100%;
@@ -424,6 +425,7 @@ const AlurakutLoginScreen = css`
           border-radius: var(--commonRadius);
           margin-top: 24px;
           margin-bottom: 16px;
+          color:#555;
         }
         button {
           width: 100%;
@@ -431,8 +433,9 @@ const AlurakutLoginScreen = css`
           border: 0;
           padding: 12px;
           border-radius: var(--commonRadius);
-          background-color: var(--colorPrimary);
+          background-color: rgba(80, 65, 160, 1);
           color: var(--textSecondaryColor);
+          margin-top: 5px;
         }
       }
     }
@@ -442,11 +445,12 @@ const AlurakutLoginScreen = css`
       border-radius: var(--commonRadius);
       padding: 8px;
       p {
+        color:#ccc;
         font-size: 12px;
         text-align: center;
         a {
           text-decoration: none;
-          color: var(--colorPrimary);
+          color: white;
         }
       }
     }
