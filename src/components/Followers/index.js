@@ -1,6 +1,6 @@
 import React from "react";
 
-function FollowersGet(props){
+function Followers(props){
     /*
     const elSize= 6;
     const newFollowers= [];
@@ -80,4 +80,4 @@ function FollowersGet(props){
     );
 }
 
-export default FollowersGet;
+export default Followers;
