@@ -1,3 +1,18 @@
+# Projeto da imersão da Alura utilizando o ReactJs e o Next.Js
+***
+ - O site trata-se de um site que utiliza aspectos visuais da antiga rede social: Orkut
+ - Utiliza seu login do GitHub para acessar seus amigos do Github
+ - Se comunica com  APIs externas e internas no seu funcionamento : GitHub,DatoCMS e API interna.
+ ### [**Layout Base**](https://www.figma.com/file/xHF0n0qxiE2rqjqAILiBUB/Alurakut?node-id=58%3A0)
+***
+## [**Clique aqui ou na imagem para vizualizar!**](https://alurakut-pedrogurgell.vercel.app/login)
+  [![alt text](https://github.com/PedroGurgell/alurakut/blob/main/previews/previewAluraPedroGurgell.png?raw=true)](https://alurakut-pedrogurgell.vercel.app/login)
+  
+## [**Feito na Alura**](https://alurakut-eta.vercel.app)
+  [![alt text](https://github.com/PedroGurgell/alurakut/blob/main/previews/previewLayoutBase.png?raw=true)](https://alurakut-eta.vercel.app)  
+ 
+ ***
+
 # Example app with styled-components
 
 This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
