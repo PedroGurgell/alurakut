@@ -8,8 +8,7 @@ import {AlurakutMenu, AlurakutProfileSidebarMenuDefault, OrkutNostalgicIconSet} 
 import { ProfileRelationsBoxWrapper } from '../src/components/ProfileRelations';
 import Communities from '../src/components/ProfileRelations/Communities';
 import CommunityPeople from '../src/components/ProfileRelations/CommunityPeople';
-import Followers from '../src/components/ProfileRelations/followers';
-
+import { FollowersGet } from '../src/components/ProfileRelations/followers';
 
 function ProfileSideBar(propriedades){
   return(
@@ -135,7 +134,7 @@ export default function Home(props) {
       <div className="profileRelations" style={{gridArea:'profileRelations'}}>
       <ProfileRelationsBoxWrapper>
 
-        <Followers usuario = {usuario} />
+        <FollowersGet usuario = {usuario} />
         
       </ProfileRelationsBoxWrapper>
 
